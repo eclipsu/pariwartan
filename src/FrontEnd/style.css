@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300&display=swap');
+
+
+
+* {
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: 'Recursive', sans-serif;
+
+}
+
+body {
+    height:100vh;
+    width: 100vw;
+    background-image:linear-gradient(rgb(255, 120, 120), rgb(255, 77, 107));
+
+}
+div {
+    display: grid;
+    place-items: center;
+   
+}
+
+
+#rename-button {
+    margin-top: 25%;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #666;
+}
+
+#rename-button:hover {background-color: #e6e6e6}
+
+#rename-button:active {
+  background-color: #e6e6e6;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+a:visited, a { 
+    text-decoration: none; 
+    color:currentColor;
+
+
+}
+
+.loader {
+    display:flex;
+    position:relative;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(25px)
+}
+
+.loading-img {
+    width:20px;
+    height:20px;
+    transform: translateX(-10px)
+
+}
+
+#renaming {
+    color: white;
+    font-size: 0.25em;
+    font-weight: bolder;
+}
+
+.hidden {
+    display:none;
+}
+
+.visible {
+
+}
