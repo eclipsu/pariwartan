@@ -36,15 +36,15 @@ def backup(symlinks=False, ignore=None):
             else:
                 shutil.copy2(s, d)
     except:
-        print("Failed to backup")
-
+        pass
+    
 def rename():
     """
     renames the renaming folder from according to the starting number 
     """
     (starting_number, backup_path, dir_path) = getMetadata()
-    
-    
+
+
     if dir_path == '':
         print("Invalid path")
         exit()
@@ -52,14 +52,13 @@ def rename():
         print("No backup specified")
         exit()
 
-    filename, file_extension = os.path.splitext('/path/to/somefile.ext')
 
 
-    backup()
     files = os.listdir(dir_path) 
     loop_number = 0
-
     for index, file in enumerate(files):
+        print("lol")
+        filename, file_extension = os.path.splitext(os.path.join(dir_path, file))
         try:
             number = starting_number + loop_number
             loop_number +=  1
