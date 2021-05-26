@@ -1,9 +1,4 @@
-
 {
-    "details": 
-    {
-        "starting_number": 0,
-        "dir_path": "",
-        "backup_path": ""
-    }
+    "starting_number": 0,
+    "dir_path": ""
 }
