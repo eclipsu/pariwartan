@@ -19,6 +19,7 @@ renameButon.addEventListener('click', () => {
                     showConfirmButton: true,
                     width: '850px',
                     height: '750px',
+                    timer: 1000
                  });
                 loader.classList.replace("visible", "hidden");
 
@@ -31,6 +32,7 @@ renameButon.addEventListener('click', () => {
                     showConfirmButton: true,
                     width: '850px',
                     height: '750px',
+                    timer: 1000
                  });
                 loader.classList.replace("visible", "hidden")
                
@@ -43,6 +45,7 @@ renameButon.addEventListener('click', () => {
             showConfirmButton: true,
             width: '850px',
             height: '750px',
+            timer: 1000
          });
     }
 
