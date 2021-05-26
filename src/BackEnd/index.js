@@ -12,7 +12,7 @@ renameButon.addEventListener('click', () => {
     let loader = document.getElementById("loader");
     loader.classList.replace("hidden", "visible");
     try {
-        PythonShell.run("/home/eclipsu/Documents/WorkSpace/pariwartan/src/BackEnd/app.py", null, (err, respnse_message) => {
+        PythonShell.run("app.py", null, (err, respnse_message) => {
             if (err) {
                 Swal.fire({
                     title: `${err}`,
@@ -41,7 +41,7 @@ renameButon.addEventListener('click', () => {
     }
     catch(err) {
         Swal.fire({
-            title: `${err}`,
+            title: `Something went wrong!`,
             showConfirmButton: true,
             width: '850px',
             height: '750px',

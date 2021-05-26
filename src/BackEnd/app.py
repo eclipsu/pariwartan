@@ -24,18 +24,15 @@ def rename(starting_number, dir_path):
     renames the renaming folder from according to the starting number 
     """
 
-    files_list = []
-    files = os.listdir(dir_path) 
-    for index, file in enumerate(files):
-        filename, file_extension = os.path.splitext(file)
-        files_list.append(filename + file_extension)
+    files = os.listdir(dir_path)
 
-    files_list.sort()
+    sorted_file = sorted(files, key = lambda x: int(os.path.splitext(x)[0]))
 
-    for file in files_list:
+    for file in sorted_file:
         filename, file_extension = os.path.splitext(file)
         os.rename(os.path.join(dir_path, file), os.path.join(dir_path, ''.join([str(starting_number), f"{file_extension}"])))
 
+        # print(f"{file} -->  {os.path.join(''.join([str(starting_number), f'{file_extension}']))}")
         starting_number += 1
 
 rename(starting_number, dir_path)
