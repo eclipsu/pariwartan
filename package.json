@@ -1,14 +1,15 @@
 {
-  "name": "raj-photo-studio",
-  "productName": "Raj Photo Studio",
-  "version": "1.0.0",
-  "description": "My Electron application description",
+  "name": "pariwartan",
+  "productName": "Pariwartan",
+  "version": "1.1.0",
+  "description": "A Basic bulkrenamer application",
   "main": "src/app.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
+    "build": "electron-builder",
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
@@ -43,7 +44,8 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
-    "python-shell": "^3.0.0"
+    "python-shell": "^3.0.0",
+    "sweetalert2": "^11.0.11"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.54",
