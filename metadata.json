@@ -1,13 +1,4 @@
-
 {
-    "renamer":
-    {
-        "srt" : 0,
-        "path" : ""
-    },
-    "backup":
-    {
-        "src" : "",
-        "dst" : ""
-    }
+    "starting_number": 0,
+    "dir_path": ""
 }
