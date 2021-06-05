@@ -38,7 +38,7 @@ def rename(starting_number, dir_path):
         starting_number += 1
         filename, file_extension = os.path.splitext(files)
         os.rename(os.path.join(dir_path, files), os.path.join(dir_path, ''.join([str(starting_number), f"{file_extension}"])))
-        # print(f"{files} -->  {os.path.join(''.join([str(starting_number), f'{file_extension}']))}")
+        print(f"{files} -->  {os.path.join(''.join([str(starting_number), f'{file_extension}']))}")
 
 rename(starting_number, dir_path)
 
