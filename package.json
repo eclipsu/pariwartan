@@ -3,13 +3,13 @@
   "productName": "Pariwartan",
   "version": "1.1.0",
   "description": "A Basic bulkrenamer application",
-  "main": "src/app.js",
+  "main": "main.js",
   "scripts": {
     "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
+    "package": "electron-forge package --icon \"E:\\Workspace and Projects\\pariwartan\\assets\\icon.ico\" ",
+    "make": "electron-forge make --icon \"E:\\Workspace and Projects\\pariwartan\\assets\\icon.ico\" ",
     "publish": "electron-forge publish",
-    "build": "electron-builder",
+    "build": "electron-builder ",
     "lint": "echo \"No linting configured\""
   },
   "keywords": [],
@@ -17,7 +17,9 @@
   "license": "MIT",
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+        "icon": "assets/icon.ico"
+      },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
