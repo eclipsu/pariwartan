@@ -11,7 +11,7 @@ function readJsonFile(file) {
 
 const frename = async () => {
   // Watchdog Folder path
-  const metadata = readJsonFile("./metadata.json");
+  const metadata = readJsonFile(resolve(__dirname, "./metadata.json"));
   const imageDirPath = resolve(metadata.dir_path);
   let files = [];
   console.log(metadata);
