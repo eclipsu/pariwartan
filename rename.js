@@ -20,8 +20,8 @@ const frename = async () => {
     return "Couldn't find the folder";
   }
 
-  const named_files = files.filter((file) => /\d/.test(file.split(" ")[0].split(".")[0]));
-  const unnamed_files = files.filter((file) => !/\d/.test(file.split(" ")[0].split(".")[0]));
+  const named_files = files.filter((file) => !isNaN(file.split(" ")[0].split(".")[0]));
+  const unnamed_files = files.filter((file) => isNaN(file.split(" ")[0].split(".")[0]));
 
   const sorted_named_files = named_files.sort((a, b) => {
     return parseInt(a) - parseInt(b);
@@ -40,5 +40,7 @@ const frename = async () => {
   });
   return "Sucess";
 };
+
+frename();
 
 module.exports = { frename };
