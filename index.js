@@ -11,7 +11,7 @@ renameButon.addEventListener("click", () => {
   bleep.play();
   loader.classList.replace("hidden", "visible");
   try {
-    ipcRenderer.send("hello", "hello from lado");
+    ipcRenderer.send("hello", "");
   } catch (err) {
     Swal.fire({
       title: `${err}`,
