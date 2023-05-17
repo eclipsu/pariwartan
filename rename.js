@@ -9,8 +9,6 @@ function readJsonFile(file) {
   return data;
 }
 
-// 115-9146
-
 const frename = async () => {
   // Folder path
   const metadata = readJsonFile(resolve(__dirname, "./metadata.json"));
@@ -36,11 +34,13 @@ const frename = async () => {
   if (last_file === undefined) last_file = "0.eclipsu";
   unnamed_files.forEach((unnamed_file, i) => {
     const oldFilePath = imageDirPath + `\\${unnamed_file}`;
-    const newFilePath = imageDirPath + `\\${parseInt(last_file.split(".")[0]) + (i += 1)} - ${unnamed_file.split(".")[0]}\.${unnamed_file.split(".")[1]}`;
+    const newFilePath = imageDirPath + `\\${parseInt(last_file.split(".")[0]) + (i += 1)}\.${unnamed_file.split(".")[1]}`;
+
     rename(oldFilePath, newFilePath, (err) => void 0);
   });
   return "Sucess";
 };
+
 frename();
 
 module.exports = { frename };
